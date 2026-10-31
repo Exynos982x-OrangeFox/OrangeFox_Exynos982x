@@ -24,6 +24,15 @@ series and the Galaxy F62.
 | Galaxy Note10+ 5G | d2x | SM-N976B, SM-N976N | Needs testing |
 | Galaxy F62 | f62 | SM-E625F | Needs testing |
 
+### Tested ROMs
+
+Decryption with a PIN, and the PIN still accepted in the ROM afterwards, confirmed with:
+
+| Device | ROM | Build | Security patch | Notes |
+| :-- | :-- | :-- | :-- | :-- |
+| Galaxy S10+ (beyond2lte) | Evolution X 16.0 | 2026-09-17 | 2026-09-01 | |
+| Galaxy S10+ (beyond2lte) | Project Infinity-X 3.12 (GApps) | 2026-07-10 | 2026-07-01 | Custom kernel; flashed with `adb sideload` from OrangeFox |
+
 Each release provides, per device:
 
 - `OrangeFox-R12.0-Unofficial-<codename>.img`, to flash with fastboot or from a recovery;
