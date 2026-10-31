@@ -1,0 +1,69 @@
+name: Bug report
+description: Something does not work.
+title: "[Bug] <codename>: <short description>"
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Galaxy S10e (beyond0lte)
+        - Galaxy S10 (beyond1lte)
+        - Galaxy S10+ (beyond2lte)
+        - Galaxy S10 5G (beyondx)
+        - Galaxy Note10 (d1)
+        - Galaxy Note10 5G (d1x)
+        - Galaxy Note10+ (d2s)
+        - Galaxy Note10+ 5G (d2x)
+        - Galaxy F62 (f62)
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: SM-G975F
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Recovery build (release tag)
+      placeholder: test-2026-10-31
+    validations:
+      required: true
+  - type: input
+    id: rom
+    attributes:
+      label: ROM (name, version, build date)
+      placeholder: LineageOS 23.2 20261024
+    validations:
+      required: true
+  - type: textarea
+    id: compat
+    attributes:
+      label: ROM compatibility check
+      description: Output of the three commands of the README's "Check that your ROM is compatible" section.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happens
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Attach recovery.log, logcat.txt and dmesg.txt, collected in OrangeFox right after the problem:
+
+        adb pull /tmp/recovery.log
+        adb logcat -d > logcat.txt
+        adb shell dmesg > dmesg.txt
+    validations:
+      required: true

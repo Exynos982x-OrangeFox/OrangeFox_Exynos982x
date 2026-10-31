@@ -1,0 +1,148 @@
+name: Test report
+description: Report how a build works on your device, even if everything works.
+title: "[Test] <codename> - <ROM>"
+labels: ["test report"]
+body:
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Galaxy S10e (beyond0lte)
+        - Galaxy S10 (beyond1lte)
+        - Galaxy S10+ (beyond2lte)
+        - Galaxy S10 5G (beyondx)
+        - Galaxy Note10 (d1)
+        - Galaxy Note10 5G (d1x)
+        - Galaxy Note10+ (d2s)
+        - Galaxy Note10+ 5G (d2x)
+        - Galaxy F62 (f62)
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: SM-G975F
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Recovery build (release tag)
+      placeholder: test-2026-10-31
+    validations:
+      required: true
+  - type: input
+    id: rom
+    attributes:
+      label: ROM (name, version, build date)
+      placeholder: LineageOS 23.2 20261024
+    validations:
+      required: true
+  - type: dropdown
+    id: lock
+    attributes:
+      label: Lockscreen type
+      options:
+        - None
+        - PIN
+        - Pattern
+        - Password
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Installation method
+      options:
+        - fastbootd
+        - Odin
+        - From an existing recovery
+    validations:
+      required: true
+  - type: dropdown
+    id: boot
+    attributes:
+      label: 1. Recovery boots, display, touch and brightness
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: decrypt
+    attributes:
+      label: 2. /data decryption
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: pin
+    attributes:
+      label: 3. Lockscreen PIN/pattern/password still accepted in the ROM afterwards
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: adb_mtp
+    attributes:
+      label: 4. ADB and MTP
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: zip
+    attributes:
+      label: 5. Zip flashing
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: backup
+    attributes:
+      label: 6. Backup and restore (boot, data)
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: fastbootd
+    attributes:
+      label: 7. fastbootd
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: misc
+    attributes:
+      label: 8. microSD / USB-OTG / flashlight / battery level
+      options:
+        - Works
+        - Broken
+        - Not tested
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything broken or odd. For a broken item, attach recovery.log, logcat.txt and dmesg.txt (see the README).
