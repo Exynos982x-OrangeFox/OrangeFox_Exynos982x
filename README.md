@@ -37,7 +37,7 @@ Each release provides, per device:
 
 - `OrangeFox-R12.0-Unofficial-<codename>.img`, to flash with fastboot or from a recovery;
 - `OrangeFox-R12.0-Unofficial-<codename>.tar`, to flash with Odin;
-- `SHA256SUMS`, to check your download.
+- a `.sha256` file next to each of them, to check your download.
 
 **Flash only the file matching your codename.**
 
@@ -78,11 +78,11 @@ ROM, your test report is especially welcome.
 ## Installation
 
 Download the files for your device from the
-[latest release](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/releases) and check
-them:
+[latest release](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/releases), with
+their `.sha256` files, and check them:
 
 ```sh
-sha256sum -c --ignore-missing SHA256SUMS
+sha256sum -c OrangeFox-R12.0-Unofficial-<codename>.img.sha256
 ```
 
 Then pick one method.
