@@ -45,7 +45,7 @@ body:
     attributes:
       label: Lockscreen type
       options:
-        - None
+        - No lockscreen
         - PIN
         - Pattern
         - Password
