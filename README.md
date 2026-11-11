@@ -4,8 +4,8 @@ Unofficial [OrangeFox Recovery](https://orangefox.tech) R12.0 builds for the Gal
 series and the Galaxy F62.
 
 > [!WARNING]
-> These are **test builds**. Only the Galaxy S10+ (beyond2lte) has been tested on real hardware
-> so far. Read the [requirements](#requirements) before flashing, and keep your current recovery
+> These are **test builds**. Only the Galaxy S10+ (beyond2lte) and Note10+ (d2s) have been tested
+> on real hardware so far. Read the [requirements](#requirements) before flashing, and keep your current recovery
 > image to go back.
 
 **Downloads: [Releases](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/releases)**
@@ -20,18 +20,22 @@ series and the Galaxy F62.
 | Galaxy S10 5G | beyondx | SM-G977B, SM-G977N | Needs testing |
 | Galaxy Note10 | d1 | SM-N970F, SM-N970F/DS | Needs testing |
 | Galaxy Note10 5G | d1x | SM-N971N | Needs testing |
-| Galaxy Note10+ | d2s | SM-N975F, SM-N975F/DS | Needs testing |
+| Galaxy Note10+ | d2s | SM-N975F, SM-N975F/DS | Tested |
 | Galaxy Note10+ 5G | d2x | SM-N976B, SM-N976N | Needs testing |
 | Galaxy F62 | f62 | SM-E625F | Needs testing |
 
 ### Tested ROMs
 
-Decryption with a PIN, and the PIN still accepted in the ROM afterwards, confirmed with:
+Reported working with the `test-2026-10-31` build. *PIN tested* means /data was decrypted with a
+lockscreen PIN and the PIN was still accepted in the ROM afterwards.
 
-| Device | ROM | Build | Security patch | Notes |
+| Device | ROM | Android | PIN tested | Report |
 | :-- | :-- | :-- | :-- | :-- |
-| Galaxy S10+ (beyond2lte) | Evolution X 16.0 | 2026-09-17 | 2026-09-01 | |
-| Galaxy S10+ (beyond2lte) | Project Infinity-X 3.12 (GApps) | 2026-07-10 | 2026-07-01 | Custom kernel; flashed with `adb sideload` from OrangeFox |
+| Galaxy S10+ (beyond2lte) | Evolution X 16.0 (2026-09-17) | 16 | Yes | Maintainer |
+| Galaxy S10+ (beyond2lte) | Project Infinity-X 3.12 GApps (2026-07-10), custom kernel | 16 | Yes | Maintainer |
+| Galaxy S10+ (beyond2lte) | Matrixx 11.4.0 Polar Vanilla | 15 | No (no lockscreen) | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1) |
+| Galaxy Note10+ (d2s) | Evolution X 11.11 (2026-09-17) | 16 | Yes | [#2](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/2) |
+| Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-10-25) | 16 | Yes | [#3](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/3) |
 
 Each release provides, per device:
 
