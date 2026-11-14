@@ -33,8 +33,8 @@ lockscreen PIN and the PIN was still accepted in the ROM afterwards.
 | :-- | :-- | :-- | :-- | :-- |
 | Galaxy S10+ (beyond2lte) | Evolution X 16.0 (2026-09-17) | 16 | Yes | Maintainer |
 | Galaxy S10+ (beyond2lte) | Project Infinity-X 3.12 GApps (2026-07-10), custom kernel | 16 | Yes | Maintainer |
-| Galaxy S10+ (beyond2lte) | Matrixx 11.4.0 Polar Vanilla | 15 | Yes | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1) |
-| Galaxy S10+ (beyond2lte) | Matrixx (Android 16) | 16 | Not reported | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1#issuecomment-6796919518) |
+| Galaxy S10+ (beyond2lte) | Matrixx 11.4.0 Polar Vanilla | 15 | No (no lockscreen) | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1) |
+| Galaxy S10+ (beyond2lte) | Matrixx 12.3 Binary Vanilla (2026-05-16) | 16 | Yes | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1#issuecomment-6796919518) |
 | Galaxy Note10+ (d2s) | Evolution X 11.11 (2026-09-17) | 16 | Yes | [#2](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/2) |
 | Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-10-25) | 16 | Yes | [#3](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/3) |
 
