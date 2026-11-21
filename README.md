@@ -37,6 +37,7 @@ lockscreen PIN and the PIN was still accepted in the ROM afterwards.
 | Galaxy S10+ (beyond2lte) | Matrixx 12.3 Binary Vanilla (2026-05-16) | 16 | Yes | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1#issuecomment-6796919518) |
 | Galaxy Note10+ (d2s) | Evolution X 11.11 (2026-09-17) | 16 | Yes | [#2](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/2) |
 | Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-10-25) | 16 | Yes | [#3](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/3) |
+| Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-11-15) | 16 | Yes | [#4](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/4) |
 
 Each release provides, per device:
 
