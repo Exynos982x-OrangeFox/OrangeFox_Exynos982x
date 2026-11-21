@@ -3,30 +3,29 @@
 Unofficial [OrangeFox Recovery](https://orangefox.tech) R12.0 builds for the Galaxy S10 and Note10
 series and the Galaxy F62.
 
-> [!WARNING]
-> These are **test builds**. Only the Galaxy S10+ (beyond2lte) and Note10+ (d2s) have been tested
-> on real hardware so far. Read the [requirements](#requirements) before flashing, and keep your current recovery
-> image to go back.
+> [!IMPORTANT]
+> Read the [requirements](#requirements) before flashing, and keep your current recovery image to
+> go back.
 
 **Downloads: [Releases](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/releases)**
 
 ## Devices
 
-| Device | Codename | Models | Status |
-| :-- | :-- | :-- | :-- |
-| Galaxy S10e | beyond0lte | SM-G970F, SM-G970F/DS, SM-G970N | Needs testing |
-| Galaxy S10 | beyond1lte | SM-G973F, SM-G973F/DS, SM-G973N | Needs testing |
-| Galaxy S10+ | beyond2lte | SM-G975F, SM-G975F/DS, SM-G975N | Tested |
-| Galaxy S10 5G | beyondx | SM-G977B, SM-G977N | Needs testing |
-| Galaxy Note10 | d1 | SM-N970F, SM-N970F/DS | Needs testing |
-| Galaxy Note10 5G | d1x | SM-N971N | Needs testing |
-| Galaxy Note10+ | d2s | SM-N975F, SM-N975F/DS | Tested |
-| Galaxy Note10+ 5G | d2x | SM-N976B, SM-N976N | Needs testing |
-| Galaxy F62 | f62 | SM-E625F | Needs testing |
+| Device | Codename | Models |
+| :-- | :-- | :-- |
+| Galaxy S10e | beyond0lte | SM-G970F, SM-G970F/DS, SM-G970N |
+| Galaxy S10 | beyond1lte | SM-G973F, SM-G973F/DS, SM-G973N |
+| Galaxy S10+ | beyond2lte | SM-G975F, SM-G975F/DS, SM-G975N |
+| Galaxy S10 5G | beyondx | SM-G977B, SM-G977N |
+| Galaxy Note10 | d1 | SM-N970F, SM-N970F/DS |
+| Galaxy Note10 5G | d1x | SM-N971N |
+| Galaxy Note10+ | d2s | SM-N975F, SM-N975F/DS |
+| Galaxy Note10+ 5G | d2x | SM-N976B, SM-N976N |
+| Galaxy F62 | f62 | SM-E625F |
 
 ### Tested ROMs
 
-Reported working with the `test-2026-10-31` build. *PIN tested* means /data was decrypted with a
+Confirmed working on these setups so far. *PIN tested* means /data was decrypted with a
 lockscreen PIN and the PIN was still accepted in the ROM afterwards.
 
 | Device | ROM | Android | PIN tested | Report |
@@ -35,9 +34,11 @@ lockscreen PIN and the PIN was still accepted in the ROM afterwards.
 | Galaxy S10+ (beyond2lte) | Project Infinity-X 3.12 GApps (2026-07-10), custom kernel | 16 | Yes | Maintainer |
 | Galaxy S10+ (beyond2lte) | Matrixx 11.4.0 Polar Vanilla | 15 | No (no lockscreen) | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1) |
 | Galaxy S10+ (beyond2lte) | Matrixx 12.3 Binary Vanilla (2026-05-16) | 16 | Yes | [#1](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/1#issuecomment-6796919518) |
+| Galaxy Note10 (d1) | Not specified | — | Not reported | XDA |
 | Galaxy Note10+ (d2s) | Evolution X 11.11 (2026-09-17) | 16 | Yes | [#2](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/2) |
 | Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-10-25) | 16 | Yes | [#3](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/3) |
 | Galaxy Note10+ (d2s) | LineageOS 23.2 nightly (2026-11-15) | 16 | Yes | [#4](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/4) |
+| Galaxy Note10+ 5G (d2x) | Not specified | — | Not reported | XDA |
 
 Each release provides, per device:
 
@@ -116,11 +117,11 @@ Then pick one method.
 
 *Install → Install Image*, select the `.img`, then the *Recovery* partition.
 
-## Testing and reporting
+## Reporting
 
-Please test and report with the
+Tried it on a device or ROM that is not listed above? Please share it with the
 [test report form](https://github.com/Exynos982x-OrangeFox/OrangeFox_Exynos982x/issues/new?template=test_report.yml),
-even if everything works: one report per device and ROM. What to test:
+even if everything works: one report per device and ROM. What to check:
 
 1. The recovery boots; display, touch and brightness work.
 2. /data is decrypted with your lockscreen PIN, pattern or password (or without prompting if you
@@ -143,6 +144,12 @@ adb shell dmesg > dmesg.txt
 ```
 
 ## Known issues
+
+### MTP not detected by the PC on the Galaxy Note10 (d1)
+
+Reported once on XDA, under investigation: flashing zips works, but the PC did not see the phone
+for file transfers. Meanwhile, use `adb push` or `adb sideload` to copy files. If it happens to you,
+please open a bug report saying which OS your PC runs.
 
 ### Lockscreen PIN refused in the ROM after using the recovery
 
